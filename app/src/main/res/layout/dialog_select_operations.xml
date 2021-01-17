@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_gravity="center"
+    android:orientation="vertical"
+    android:padding="16dp">
+
+
+    <TextView
+        android:id="@+id/tvGameSelected"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="16dp"
+        android:fontFamily="@font/slackey"
+        android:paddingStart="24dp"
+        android:paddingEnd="24dp"
+        android:text="@string/select_operators"
+        android:textColor="?android:attr/textColorPrimary"
+        android:textSize="30sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginTop="10dp"
+        android:text="@string/select_operators"
+        android:textColor="?android:attr/textColorSecondary"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvGameSelected" />
+
+    <ImageView
+        android:id="@+id/ivPlusSign"
+        android:layout_width="36dp"
+        android:layout_height="36dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginEnd="8dp"
+        android:contentDescription="@string/none"
+        app:layout_constraintBottom_toBottomOf="@+id/ivMinusSign"
+        app:layout_constraintEnd_toStartOf="@+id/ivMinusSign"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/ivMinusSign"
+        app:srcCompat="@drawable/vector_plus" />
+
+    <ImageView
+        android:id="@+id/ivMultiplySign"
+        android:layout_width="36dp"
+        android:layout_height="36dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginEnd="8dp"
+        android:contentDescription="@string/none"
+        app:layout_constraintBottom_toBottomOf="@+id/ivDivisionSign"
+        app:layout_constraintEnd_toStartOf="@+id/ivDivisionSign"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/ivDivisionSign"
+        app:srcCompat="@drawable/vector_multiply" />
+
+    <ImageView
+        android:id="@+id/ivDivisionSign"
+        android:layout_width="36dp"
+        android:layout_height="36dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="24dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginBottom="32dp"
+        android:contentDescription="@string/none"
+        app:layout_constraintBottom_toTopOf="@id/tvPlay"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/ivMultiplySign"
+        app:layout_constraintTop_toBottomOf="@+id/ivMinusSign"
+        app:srcCompat="@drawable/vector_division" />
+
+    <ImageView
+        android:id="@+id/ivMinusSign"
+        android:layout_width="36dp"
+        android:layout_height="36dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="24dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginBottom="24dp"
+        android:contentDescription="@string/none"
+        app:layout_constraintBottom_toTopOf="@+id/ivDivisionSign"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/ivPlusSign"
+        app:layout_constraintTop_toBottomOf="@+id/textView2"
+        app:srcCompat="@drawable/vector_minus" />
+
+    <TextView
+        android:id="@+id/tvPlay"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="30dp"
+        android:layout_marginBottom="15dp"
+        android:layout_weight="1"
+        android:text="@string/play"
+        android:textColor="?attr/colorAccent"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <TextView
+        android:id="@+id/tvCancel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="30dp"
+        android:layout_weight="1"
+        android:gravity="end"
+        android:text="@string/cancel"
+        android:textSize="14sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="@+id/tvPlay"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/tvPlay" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

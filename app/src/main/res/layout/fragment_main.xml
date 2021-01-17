@@ -1,0 +1,153 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.motion.widget.MotionLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:ads="http://schemas.android.com/apk/res-auto"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    style="@style/App.Background"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="0dp"
+    ads:layoutDescription="@xml/fragment_main_scene">
+
+
+    <TextView
+        android:id="@+id/tvAppName"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginEnd="8dp"
+        android:ellipsize="none"
+        android:fontFamily="@font/slackey"
+        android:gravity="center_horizontal"
+        android:singleLine="true"
+        android:text="@string/app_name"
+        android:textColor="?android:attr/textColorPrimary"
+        android:textSize="30sp"
+        android:textStyle="bold"
+        ads:layout_constraintBottom_toTopOf="parent"
+        ads:layout_constraintEnd_toEndOf="parent"
+        ads:layout_constraintStart_toStartOf="parent" />
+
+    <TextView
+        android:id="@+id/tvSlogan"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:fontFamily="@font/quicksand_regular"
+        android:gravity="center"
+        android:text="@string/challenge_your_math_skills"
+        android:textSize="20sp"
+        android:textStyle="bold|italic"
+        ads:layout_constraintEnd_toEndOf="parent"
+        ads:layout_constraintStart_toStartOf="parent"
+        ads:layout_constraintTop_toBottomOf="@id/tvAppName" />
+
+    <android.widget.Button
+        android:id="@+id/btnTimeAttack"
+        style="@style/Home.button"
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+
+        android:layout_marginEnd="24dp"
+        android:fontFamily="@font/quicksand_regular"
+        android:text="@string/time_attack_game"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        ads:layout_constraintBottom_toBottomOf="parent"
+        ads:layout_constraintEnd_toStartOf="parent"
+        ads:layout_constraintTop_toTopOf="parent" />
+
+    <android.widget.Button
+        android:id="@+id/btnQuickMath"
+        style="@style/Home.button"
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="28dp"
+
+        android:fontFamily="@font/quicksand_regular"
+        android:text="@string/quick__game"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        ads:layout_constraintStart_toEndOf="parent"
+        ads:layout_constraintTop_toBottomOf="@+id/btnTimeAttack" />
+
+    <android.widget.Button
+        android:id="@+id/btnAdvanced"
+        style="@style/Home.button"
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="28dp"
+
+        android:fontFamily="@font/quicksand_regular"
+        android:text="@string/advanced_game"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        ads:layout_constraintEnd_toEndOf="parent"
+        ads:layout_constraintStart_toStartOf="parent"
+        ads:layout_constraintTop_toBottomOf="parent" />
+
+
+    <ImageView
+        android:id="@+id/ivSettings"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="16dp"
+        android:contentDescription="@string/settings_button"
+        ads:layout_constraintEnd_toEndOf="parent"
+        ads:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/vector_settings" />
+
+    <ImageView
+        android:id="@+id/ivAbout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:contentDescription="@string/none"
+        ads:layout_constraintStart_toStartOf="parent"
+        ads:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/vector_info_outline" />
+
+
+    <ImageView
+        android:id="@+id/ivHighScore"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="32dp"
+        android:contentDescription="@string/highscore_button"
+        ads:layout_constraintEnd_toEndOf="parent"
+        ads:layout_constraintStart_toStartOf="parent"
+        ads:layout_constraintTop_toBottomOf="parent"
+        ads:srcCompat="@drawable/vector_chart" />
+
+    <ImageView
+        android:id="@+id/mathAnim"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+
+        android:adjustViewBounds="true"
+        android:contentDescription="@string/background_animation"
+        android:scaleType="fitCenter"
+        ads:layout_constraintBottom_toTopOf="@+id/adView"
+        ads:layout_constraintEnd_toEndOf="parent"
+        ads:layout_constraintStart_toStartOf="parent"
+        ads:layout_constraintTop_toTopOf="parent"
+        ads:srcCompat="@drawable/kid_anim" />
+
+    <com.google.android.gms.ads.AdView
+        android:id="@+id/adView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        ads:adSize="SMART_BANNER"
+        ads:adUnitId="ca-app-pub-6870681415333406/3630015447"
+        ads:layout_constraintBottom_toBottomOf="parent"
+        ads:layout_constraintEnd_toEndOf="parent"
+        ads:layout_constraintStart_toStartOf="parent" />
+    <!--test ca-app-pub-3940256099942544/6300978111-->
+    <!--actual ca-app-pub-6870681415333406/3630015447-->
+
+</androidx.constraintlayout.motion.widget.MotionLayout>

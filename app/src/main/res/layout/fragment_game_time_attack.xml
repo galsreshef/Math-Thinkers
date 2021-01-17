@@ -1,0 +1,168 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/tvTimeAttack"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+
+    <TextView
+        android:id="@+id/tvTimeAttackInst"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="17dp"
+        android:layout_marginEnd="80dp"
+        android:fontFamily="@font/quicksand_bold"
+        android:paddingLeft="3dp"
+        android:paddingRight="3dp"
+        android:text="@string/find_correct_equation"
+        android:textColor="?android:attr/textColorPrimary"
+        android:textSize="20sp"
+        android:textStyle="italic"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/ivAnimationTeacher"
+        android:layout_width="175dp"
+        android:layout_height="175dp"
+        android:layout_marginTop="10dp"
+        android:contentDescription="@string/image_teacher"
+        android:src="@drawable/teacher_anim"
+        app:layout_constraintBottom_toTopOf="@id/layoutAdvanced"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tvTimeAttackScore" />
+
+    <TextView
+        android:id="@+id/tvTimeAttackTimeLeft"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:fontFamily="@font/coming_soon_regular"
+        android:text="@string/time_left_ten"
+        android:textSize="30sp"
+        app:layout_constraintBottom_toTopOf="@id/tvTimeAttackScore"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tvFeedback" />
+
+    <TextView
+        android:id="@+id/tvTimeAttackScore"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:fontFamily="@font/coming_soon_regular"
+        android:text="@string/start_score"
+        android:textSize="30sp"
+        app:layout_constraintBottom_toTopOf="@id/ivAnimationTeacher"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tvTimeAttackTimeLeft" />
+
+    <TextView
+        android:id="@+id/tvFeedback"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:fontFamily="@font/slackey"
+        android:text="@string/go"
+        android:textColor="?android:attr/textColorPrimary"
+        android:textSize="40sp"
+        app:layout_constraintBottom_toTopOf="@id/tvTimeAttackTimeLeft"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tvTimeAttackInst" />
+
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/layoutAdvanced"
+        android:layout_width="match_parent"
+        android:layout_height="220dp"
+        android:layout_marginStart="16dp"
+
+        android:layout_marginEnd="16dp"
+        android:layout_marginBottom="10dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/ivAnimationTeacher"
+        tools:ignore="MissingConstraints">
+
+        <android.widget.Button
+            android:id="@+id/btn0"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_margin="4dp"
+            android:background="@drawable/btn_top_left"
+            android:fontFamily="@font/amaticsc_bold"
+            android:maxLines="1"
+            android:tag="0"
+            android:text="@string/a_a_aa"
+            android:textColor="@android:color/black"
+            android:textDirection="anyRtl"
+            android:textSize="24sp"
+            app:layout_constraintBottom_toTopOf="@+id/btn2"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toLeftOf="@+id/btn1"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <android.widget.Button
+            android:id="@+id/btn1"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_margin="4dp"
+            android:background="@drawable/btn_top_right"
+            android:fontFamily="@font/amaticsc_bold"
+            android:lines="1"
+            android:tag="1"
+            android:text="@string/a_a_aa"
+            android:textColor="@android:color/black"
+            android:textDirection="anyRtl"
+            android:textSize="24sp"
+            app:layout_constraintBottom_toTopOf="@+id/btn3"
+            app:layout_constraintLeft_toRightOf="@+id/btn0"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <android.widget.Button
+            android:id="@+id/btn2"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_margin="4dp"
+            android:background="@drawable/btn_bottom_left"
+            android:fontFamily="@font/amaticsc_bold"
+            android:lines="1"
+            android:maxLines="1"
+            android:tag="2"
+            android:text="@string/a_a_aa"
+            android:textColor="@android:color/black"
+            android:textDirection="anyRtl"
+            android:textSize="24sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toLeftOf="@+id/btn3"
+            app:layout_constraintTop_toBottomOf="@+id/btn0" />
+
+        <android.widget.Button
+            android:id="@+id/btn3"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_margin="4dp"
+            android:background="@drawable/btn_bottom_right"
+            android:fontFamily="@font/amaticsc_bold"
+            android:tag="3"
+            android:text="@string/a_a_aa"
+            android:textColor="@android:color/black"
+            android:textDirection="anyRtl"
+            android:textSize="24sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintLeft_toRightOf="@+id/btn2"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/btn1" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

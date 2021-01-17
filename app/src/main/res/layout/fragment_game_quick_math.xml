@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <TextView
+        android:id="@+id/tvStopWatch"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="8dp"
+        android:fontFamily="@font/amaticsc_bold"
+        android:text="@string/start_timer"
+        android:textColor="?android:attr/textColorPrimary"
+        android:textSize="40sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.49"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/tvQuickMathQuestion"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginBottom="8dp"
+        android:elevation="20dp"
+        android:fontFamily="@font/permanentmarker_regular"
+        android:gravity="center"
+        android:text="@string/a_a_aa"
+        android:textColor="?android:attr/textColorPrimary"
+        android:textDirection="anyRtl"
+        android:textSize="48sp"
+        app:layout_constraintBottom_toTopOf="@+id/tvGo"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tvStopWatch"
+        tools:targetApi="lollipop" />
+
+    <ImageView
+        android:id="@+id/ivAnimationTeacher"
+        android:layout_width="175dp"
+        android:layout_height="175dp"
+        android:contentDescription="@string/none"
+        android:src="@drawable/teacher_anim"
+        app:layout_constraintBottom_toTopOf="@id/tvQuickMathsScore"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tvGo" />
+
+    <TextView
+        android:id="@+id/tvGo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:fontFamily="@font/slackey"
+        android:text="@string/go"
+        android:textSize="36sp"
+        app:layout_constraintBottom_toTopOf="@id/ivAnimationTeacher"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tvQuickMathQuestion" />
+
+    <TextView
+        android:id="@+id/tvQuickMathsScore"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginTop="10dp"
+        android:fontFamily="@font/amaticsc_bold"
+        android:text="@string/start_score"
+        android:textSize="30sp"
+        app:layout_constraintBottom_toTopOf="@+id/btnWrong"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/ivAnimationTeacher" />
+
+    <android.widget.Button
+        android:id="@+id/btnWrong"
+        style="@style/Home.button"
+        android:layout_width="0dp"
+        android:layout_height="64dp"
+        android:layout_gravity="bottom"
+        android:layout_marginStart="2dp"
+        android:layout_marginEnd="16dp"
+        android:layout_weight="1"
+        android:background="@drawable/btn_wrong"
+        android:elevation="10dp"
+        android:fontFamily="@font/permanentmarker_regular"
+        android:tag="1"
+        android:text="@string/wrong"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toBottomOf="@+id/btnCorrect"
+        app:layout_constraintLeft_toRightOf="@id/btnCorrect"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/btnCorrect" />
+
+    <android.widget.Button
+        android:id="@+id/btnCorrect"
+        style="@style/Home.button"
+        android:layout_width="0dp"
+        android:layout_height="64dp"
+        android:layout_gravity="bottom"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="2dp"
+        android:layout_marginBottom="30dp"
+        android:layout_weight="1"
+        android:background="@drawable/btn_correct"
+        android:elevation="10dp"
+        android:fontFamily="@font/permanentmarker_regular"
+        android:tag="0"
+        android:text="@string/correct_btn"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toLeftOf="@id/btnWrong" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,37 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <!-- Base application theme. -->
+    <style name="Theme.MathThinkers" parent="Theme.MaterialComponents.DayNight.NoActionBar">
+        <!-- Primary brand color. -->
+        <item name="colorPrimary">@color/purple_200</item>
+        <item name="colorPrimaryVariant">@color/purple_700</item>
+        <item name="colorOnPrimary">@android:color/black</item>
+        <!-- Secondary brand color. -->
+        <item name="colorSecondary">@color/button_night</item>
+        <item name="colorSecondaryVariant">@color/teal_200</item>
+        <item name="colorOnSecondary">@android:color/black</item>
+        <!-- Status bar color. -->
+        <item name="android:statusBarColor" tools:targetApi="l">@color/gradient_start_night</item>
+        <!-- Customize your theme here. -->
+        <item name="colorAccent">@color/button_night</item>
+
+    </style>
+
+    <style name="Home.button" parent="Widget.MaterialComponents.Button" >
+        <item name="android:background">@drawable/home_button_night</item>
+    </style>
+
+    <style name="App.Background" parent="Widget.MaterialComponents.Button" >
+        <item name="android:background">@drawable/background_gradient_night</item>
+    </style>
+
+    <style name="Theme_Dialog" parent="Theme.MaterialComponents.DayNight.NoActionBar">
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:windowIsFloating">true</item>
+        <item name="android:windowCloseOnTouchOutside">true</item>
+        <item name="android:windowBackground">@drawable/shape_dialog</item>
+        <item name="colorAccent">@color/button_night</item>
+<!--        <item name="thumbTint">@color/button_night</item>-->
+
+    </style>
+
+</resources>
