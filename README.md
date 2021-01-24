@@ -20,9 +20,9 @@ Get is on [Google Play](https://play.google.com/store/apps/details?id=com.thegal
 
 ### App Screens
 
-<img src="https://github.com/galsreshef/Math-Thinkers/blob/master/MathThinkers.gif" height="450" width="250">
+<img src="https://raw.githubusercontent.com/galsreshef/Math-Thinkers/master/Images/mathThinkers.gif" height="450" width="250">
 
 ## Authors
 
-* **Gal Reshef S** - *Initial work* - [Github](https://github.com/galsreshef), [Linkedin](https://www.linkedin.com/in/gal-reshef-s-93871b16a)
+* **Gal Reshef S** - *Code and design* - [Github](https://github.com/galsreshef), [Linkedin](https://www.linkedin.com/in/gal-reshef-s-93871b16a)
 * **Eliyahu Yakubov** - *former coder*
