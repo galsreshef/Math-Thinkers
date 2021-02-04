@@ -184,7 +184,7 @@ public class Main extends Fragment {
 
     }
 
-
+    @Override
     public void onPause() {
         super.onPause();
         if (mediaPlayer.isPlaying() && music) {
@@ -205,8 +205,10 @@ public class Main extends Fragment {
     @Override
     public void onDestroy() {
         super.onDestroy();
-        mediaPlayer.stop();
-        mediaPlayer.release();
+        if (mediaPlayer.isPlaying()) {
+            mediaPlayer.stop();
+            mediaPlayer.release();
+        }
     }
 
     public void startGame(String gameSelected) {
@@ -228,7 +230,7 @@ public class Main extends Fragment {
         DrawableCompat.setTint(ivMinusSign.getDrawable(), ContextCompat.getColor(context, android.R.color.darker_gray));
         DrawableCompat.setTint(ivMultiplySign.getDrawable(), ContextCompat.getColor(context, android.R.color.darker_gray));
         DrawableCompat.setTint(ivDivisionSign.getDrawable(), ContextCompat.getColor(context, android.R.color.darker_gray));
-        //////////////////////////////////////////////////////////////////////
+
         addition = sp.getBoolean("Addition", false);
         subtraction = sp.getBoolean("Subtraction", false);
         multiply = sp.getBoolean("Multiply", false);
@@ -260,9 +262,6 @@ public class Main extends Fragment {
             else
                 DrawableCompat.setTint(ivDivisionSign.getDrawable(), ContextCompat.getColor(context, R.color.button_day));
         }
-
-
-        //////////////////////////////////////////////////////////////////////
 
         ivPlusSign.setOnClickListener(v -> {
             if (addition) {

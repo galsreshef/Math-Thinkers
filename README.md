@@ -5,7 +5,7 @@ MathThinkers is an Android app.
 Get is on [Google Play](https://play.google.com/store/apps/details?id=com.thegalos.maththinkers).
 
 ### Application Goals:
-- Develop Mathmatical thinking.
+- Develop Mathematical thinking.
 - Improve mathematical skills.
 - Help practice material taught in school.
 - Help pupils solve their homework.
@@ -13,7 +13,7 @@ Get is on [Google Play](https://play.google.com/store/apps/details?id=com.thegal
 ### Features of MathThinkers
 
 - Multiple Language support.
-- Meterial show case external directory - instructions while running one of the games.
+- Material show case external directory - instructions while running one of the games.
 - Toasty external directory - for custom Toast
 - Background music player.
 - Animations.
